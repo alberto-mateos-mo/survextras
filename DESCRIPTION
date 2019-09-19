@@ -1,0 +1,19 @@
+Package: survextras
+Title: Extra Functions for Survival Analysis
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "David Alberto",
+           family = "Mateos Montes de Oca",
+           role = c("aut", "cre"),
+           email = "cldav.privmath@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides additional functions for survival analysis.
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    manipulate,
+    ggplot2,
+    grid,
+    scales
