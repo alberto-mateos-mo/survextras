@@ -7,8 +7,7 @@ parametric_diagnose <- function(modelo_km, type = "side-by-side"){
     geom_point(aes(log(modelo_km$surv), modelo_km$time))+
     labs(x = expression(bar(S)(t)), y = "t",
          title = "Exponential diagnosis",
-         subtitle = "Straigth line with negative slope expected",
-         caption = "Created by: \n David Mateos")+
+         subtitle = "Straigth line with negative slope expected")+
     theme(plot.subtitle = element_text(family = "serif"),
           plot.caption = element_text(family = "mono"),
           axis.line = element_line(size = 0.5,
@@ -30,8 +29,7 @@ parametric_diagnose <- function(modelo_km, type = "side-by-side"){
     geom_point(aes(log(-log(modelo_km$surv)), log(modelo_km$time)))+
     labs(x = expression(bar(S)(t)), y = "t",
          title = "Weibull diagnosis",
-         subtitle = "Straigth line with positive slope expected",
-         caption = "Created by: \n David Mateos")+
+         subtitle = "Straigth line with positive slope expected")+
     theme(plot.subtitle = element_text(family = "serif"),
           plot.caption = element_text(family = "mono"),
           axis.line = element_line(size = 0.5,
@@ -54,8 +52,7 @@ parametric_diagnose <- function(modelo_km, type = "side-by-side"){
     scale_x_continuous(trans = probability_trans("norm"))+
     labs(x = expression(bar(S)(t)), y = "t",
          title = "Lognormal diagnosis",
-         subtitle = "Straigth line with positive slope expected",
-         caption = "Created by: \n David Mateos")+
+         subtitle = "Straigth line with positive slope expected")+
     theme(plot.subtitle = element_text(family = "serif"),
           plot.caption = element_text(family = "mono"),
           axis.line = element_line(size = 0.5,
@@ -77,8 +74,7 @@ parametric_diagnose <- function(modelo_km, type = "side-by-side"){
     geom_point(aes(log(-log(modelo_km$surv)+1), modelo_km$time))+
     labs(x = expression(bar(S)(t)), y = "t",
          title = "Gompertz diagnosis",
-         subtitle = "Straigth line with positive slope expected",
-         caption = "Created by: \n David Mateos")+
+         subtitle = "Straigth line with positive slope expected")+
     theme(plot.subtitle = element_text(family = "serif"),
           plot.caption = element_text(family = "mono"),
           axis.line = element_line(size = 0.5,
@@ -100,8 +96,7 @@ parametric_diagnose <- function(modelo_km, type = "side-by-side"){
     geom_point(aes(log((1/modelo_km$surv)-1), log(modelo_km$time)))+
     labs(x = expression(bar(S)(t)), y = "t",
          title = "Log-logistic diagnosis",
-         subtitle = "Straigth line with positive slope expected",
-         caption = "Created by: \n David Mateos")+
+         subtitle = "Straigth line with positive slope expected")+
     theme(plot.subtitle = element_text(family = "serif"),
           plot.caption = element_text(family = "mono"),
           axis.line = element_line(size = 0.5,
@@ -120,7 +115,6 @@ parametric_diagnose <- function(modelo_km, type = "side-by-side"){
           plot.background = element_rect(fill = "white"))
 
   if (type == "side-by-side") {
-    source("funcs/multiplot.R")
     multiplot(gg_exp, gg_wei, gg_ln, gg_gomp, gg_llog, cols = 2)
   }
 

@@ -28,7 +28,7 @@ max_diff_time <- function(ajuste) {
        xlab = "Time", ylab = "Survival Prob",
        ylim = c(0,1),
        bty = "n")
-  grid.text(label = "Plot designed by: \n David Mateos" ,
+  grid.text(label = "" ,
             x = unit(1,"npc") - unit(2, "mm"),
             y= unit(2, "mm"),
             just=c("right", "bottom"),
